@@ -207,3 +207,23 @@ def book_api(isbn):
             "publication_date": book_detail.publishyear,
             "isbn": book_detail.isbn
     })
+
+@app.route('/api/review/<string:isbn>')
+def review_api(isbn):
+    """Return reviews about a single book based on isbn"""
+
+    book_detail = db.execute("SELECT id FROM books where isbn = :isbn", {"isbn": isbn}).fetchone()
+    book_id = book_detail[0]
+    reviews = db.execute("SELECT * FROM reviews where book_id = :book_id", {"book_id": book_id}).fetchall()
+    print (reviews)
+    if reviews is None:
+        return jsonify({"Message": "No reviews Found"})
+
+## Need to change the below logic to return all the reviews for a particular book
+    for review in reviews:
+        rating = review.rating
+        comment = review.review
+        return jsonify({
+            "rating": rating,
+            "Comment": comment
+    })
