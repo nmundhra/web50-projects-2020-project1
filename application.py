@@ -86,7 +86,7 @@ def book(book_id):
 
     isbn = book_details[1]
     res = requests.get("https://www.goodreads.com/book/review_counts.json",
-        params={"key": "NW3sGTgwmhqcK8LhJdK5NA", "isbns": isbn})
+        params={"key": "your_access_key", "isbns": isbn})
 ## Data in json format
     data = res.json()
 ## extract the books list
