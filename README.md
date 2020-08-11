@@ -1,11 +1,12 @@
-# Project 1
+# Book Search and review website
 
-Web Programming with Python and JavaScript
+Web Programming with Python and JavaScript - The project is to showcase my coding skills.
 "# web50-projects-2020-project1" 
 
 The project uses the flask framework to create a book review website. Database is postgresql. 
 
 Following technologies are used: ## Python, Flask, SQLalchemy, ninja 2, html and css.
+The site also use the goodreads API to display the review counts for a particular book.
 
 # templates:
 
