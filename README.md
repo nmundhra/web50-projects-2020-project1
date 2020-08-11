@@ -5,7 +5,7 @@ Web Programming with Python and JavaScript - The project is to showcase my codin
 
 The project uses the flask framework to create a book review website. Database is postgresql. 
 
-Following technologies are used: ## Python, Flask, SQLalchemy, ninja 2, html and css.
+Following technologies are used: ## Python, Flask, SQLalchemy, postgre sql, REST API, ninja 2, html and css. 
 The site also use the goodreads API to display the review counts for a particular book.
 
 # templates:
